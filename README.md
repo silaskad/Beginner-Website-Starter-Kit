@@ -1,0 +1,2 @@
+# Beginner-Website-Starter-Kit
+This kit is intended for people who are just beginning to create websites. All that we use is HTML, Vanilla CSS, and a small amount of Vanilla JavaScript. There's nothing more to make it complicated. This is the most basic version of it! This kit includes a fully developed website that can be used as a foundation for a new website that is being created for a customer.

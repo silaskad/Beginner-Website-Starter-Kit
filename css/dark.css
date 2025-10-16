@@ -1,0 +1,61 @@
+/* Add this as it's own dark.css file and linked on all pages */
+/*-- -------------------------- -->
+<---      Core Dark Styles      -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0rem) {
+  :root {
+    --clr-dark: #121212;
+    --clr-medium: #282828;
+    --clr-accent: #404040;
+    --clr-body-text-white: #FAFBFC;
+  }
+
+  body.dark_mode {
+    background-color: var(--clr-dark);
+  }
+
+  body.dark_mode p,
+  body.dark_mode li,
+  body.dark_mode h1,
+  body.dark_mode h2,
+  body.dark_mode h3,
+  body.dark_mode h4,
+  body.dark_mode h5,
+  body.dark_mode h6,
+  body.dark_mode .section_content_title,
+  body.dark_mode .section_content_text,
+  body.dark_mode .section_content_list {
+    color: var(--clr-body-text-white);
+  }
+
+  /* Use these utility classes to hide or display certain elements depending on dark-mode vs light-mode */
+  body.dark_mode .light {
+    display: none;
+  }
+
+  body.dark_mode .dark {
+    display: block !important;
+  }
+
+  .dark {
+    /* class used to hide elements that only need to be seen when dark mode is enabled */
+    display: none;
+  }
+}
+
+/*-- -------------------------- -->
+<---      Dark Mode Toggle      -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0rem) {
+    body.dark_mode #dark_mode_toggle .sun {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+
+    body.dark_mode #dark_mode_toggle .moon {
+        transform: translate(-50%, -150%);
+        opacity: 0;
+    }
+}

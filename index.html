@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Swap with the actual link-->
+    <link rel="canonical" href="https://www.website.com/">
+
+    <meta name="description" content="Meta description for the page">
+    <meta name="keywords" content="">
+
+    <!--Social Media Display-->
+    <meta property="og:title" content="Title that shows up on google searches"/>
+    <meta property="og:description" content="Meta description for the page"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="Official link for that page (https://www.site.com)"/>
+    <meta property="og:image" content="/assets/images/social.jpg"/>
+    <meta property="og:image:secure_url" content="/assets/images/social.jpg"/>
+
+    <!--Favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="/assets/images/favicons/codemûr_icon_32px.ico">
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="/assets/images/favicons/codemûr_icon_16px.ico">
+    <link rel="manifest" href="/assets/favicons/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Preload -->
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-regular-webfont.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-bold-webfont.woff2" crossorigin>
+
+    <link rel="stylesheet" href="/css/core-styles.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/dark.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Service Keyword Phrase | Company Name | City, State</title>
+</head>
+<body class="">
+    <!--Screen reader skip main nav-->
+    <a href="#main" class="skip" aria-label="skip to main content">Clik To Skip To Main Content</a>
+
+    <!-- ======================================== -->
+    <!--                Navigation                -->
+    <!-- ======================================== -->
+
+    <header id="main_nav">
+        <div class="main_nav_container">
+            <!--Nav Logo-->
+            <a href="index.html" class="nav_logo" aria-label="back to home">
+                <img alt="logo" width="180" aria-hidden="true" decoding="async">
+            </a>
+            <!--Nav List-->
+            <nav class="nav_list" role="navigation">
+                <!--Mobile Nav Toggle-->
+                <button class="nav_mobile_toggle" aria-label="mobile menu toggle">
+                    <div class="mobile_toggle_box" aria-hidden="true">
+                        <span class="toggle_box_line toggle_line1" aria-hidden="true"></span>
+                        <span class="toggle_box_line toggle_line2" aria-hidden="true"></span>
+                        <span class="toggle_box_line toggle_line3" aria-hidden="true"></span>
+                    </div>
+                </button>
+                <!-- Navigation list: We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+                <div class="nav_list_container">
+                    <ul id="nav_list_expanded" class="nav_list_content" aria-expanded="false">
+                        <!-- "nav_list_active_element" class when we switch page we move it to the current page - no JS, just pure html trick -->
+                        <li class="nav_list_content_element">
+                            <a href="index.html" class="nav_list_content_link active_element">Home</a>
+                        </li>
+                        <li class="nav_list_content_element">
+                            <a href="services.html" class="nav_list_content_link">Services</a>
+                        </li>
+                        <li class="nav_list_content_element">
+                            <a href="why-us.html" class="nav_list_content_link">Why Us</a>
+                        </li>
+                        <li class="nav_list_content_element">
+                            <a href="industries.html" class="nav_list_content_link">Industries</a>
+                        </li>
+                        <li class="nav_list_content_element">
+                            <a href="case-studies.html" class="nav_list_content_link">Case Studies</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <a href="contact-us.html" class="button_solid nav_button">Let&apos;s Talk</a>
+            <!-- Dark Mode toggle -->
+             <button id="dark_mode_toggle" aria-label="dark mode toggle">
+                <svg class="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
+                <img class="sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
+            </button>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- ======================================== -->
+        <!--                   Hero                   -->
+        <!-- ======================================== -->
+
+        <section id="hero">
+            <div class="section_container">
+                <div class="hero_picture_container">
+                    <picture class="hero_picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 767px)" srcset="assets/images/heroImageFull.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="assets/images/hero_img.png">
+                        <img src="assets/images/hero_img.png" alt="woman" loading="lazy" decoding="async">
+                    </picture>
+                    <div class="hero_picture_circles circles_top_right" aria-hidden="true">
+                        <span class="circles"></span><span class="circles"></span><span class="circles"></span><span class="circles"></span>
+                        <span class="circles"></span><span class="circles"></span><span class="circles"></span><span class="circles"></span>
+                        <span class="circles"></span><span class="circles"></span><span class="circles"></span><span class="circles"></span>
+                        <span class="circles"></span><span class="circles"></span><span class="circles"></span><span class="circles"></span>
+                    </div>
+                    <div class="hero_picture_circles circles_bottom_left" aria-hidden="true">
+                        <span class="circles"></span><span class="circles"></span><span class="circles"></span><span class="circles"></span>
+                        <span class="circles"></span><span class="circles"></span><span class="circles"></span><span class="circles"></span>
+                        <span class="circles"></span><span class="circles"></span><span class="circles"></span><span class="circles"></span>
+                        <span class="circles"></span><span class="circles"></span><span class="circles"></span><span class="circles"></span>
+                    </div>
+                </div>
+                <div class="section_content">
+                    <span for="hero_title" class="section_content_topper hero_topper">CodeMûr</span>
+                    <h1 id="hero_title" class="section_content_title">Build High-Performing Remote Teams in the Philippines & Latin America</h1>
+                    <p class="section_content_text">
+                        Since 2014, we have assisted multinational corporations in hiring and managing top-tier offshore talent, ranging from virtual assistants to specialized professionals, offering speed, cost savings, and reliable, long-term partnerships.
+                    </p>
+                    <div class="hero_button_container">
+                        <a href="contact-us.html" class="button_solid">Access Top Talent</a>
+                        <a href="services.html" class="button_outline">See How It Works</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================== -->
+        <!--                 client                   -->
+        <!-- ======================================== -->
+
+        <section id="client">
+            <div class="section_container">
+                <div class="section_content">
+                    <div class="section_flex_top">
+                        <h2 class="section_content_title">Global Outsourcing Platform for Remote Teams</h2>
+                        <p class="section_content_text">
+                            <a href="#" class="link">Read about us</a>
+                            below.
+                        </p>
+                    </div>
+                    <div class="client_grid">
+                        <!-- Client 1 -->
+                         <div class="client_grid_container">
+                            <div class="client_grid_content">
+                                <figure class="client_content">
+                                    <a href="#" target="_blank">
+                                        <img src="assets/images/1Forbes_-768x300.webp" alt="forbes" loading="lazy" decoding="async" width="768" height="300">
+                                    </a>
+                                    <figcaption class="section_content_text">
+                                        <em>&apos;Powering the Remote Outsourcing Revolution With 10,000+ World-Class Agents&apos;</em>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                         </div>
+                         <!-- Client 2 -->
+                         <div class="client_grid_container">
+                            <div class="client_grid_content">
+                                <figure class="client_content">
+                                    <a href="#" target="_blank">
+                                        <img src="assets/images/Fast_Company-1.png" alt="fast company" loading="lazy" decoding="async" width="400" height="62">
+                                    </a>
+                                    <figcaption class="section_content_text">
+                                        <em>&apos;Reimagining Global Employment With 6,000 New Roles Created&apos;</em>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                         </div>
+                         <!-- Client 3 -->
+                         <div class="client_grid_container">
+                            <div class="client_grid_content">
+                                <figure class="client_content">
+                                    <a href="#" target="_blank">
+                                        <img src="assets/images/Variety-Logo.webp" alt="forbes" loading="lazy" decoding="async" width="640" height="194">
+                                    </a>
+                                    <figcaption class="section_content_text">
+                                        <em>&apos;How We Grew Into the World&apos;s Trusted Outsourcing Partner&apos;</em>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                         </div>
+                         <!-- Client 4 -->
+                         <div class="client_grid_container">
+                            <div class="client_grid_content">
+                                <figure class="client_content">
+                                    <a href="#" target="_blank">
+                                        <img src="assets/images/Vanity-Fair-logo-1024x576.webp" alt="forbes" loading="lazy" decoding="async" width="1024" height="576">
+                                    </a>
+                                    <figcaption class="section_content_text">
+                                        <em>&apos;Our Fastest Growth Yet, Powering Thousands of New Remote Hires&apos;</em>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                         </div>
+                         <!-- Client 5 -->
+                         <div class="client_grid_container">
+                            <div class="client_grid_content">
+                                <figure class="client_content">
+                                    <a href="#" target="_blank">
+                                        <img src="assets/images/Daily_Mail_Logo_2-removebg-preview-1-768x131.webp" alt="forbes" loading="lazy" decoding="async" width="768" height="131">
+                                    </a>
+                                    <figcaption class="section_content_text">
+                                        <em>&apos;CodeMûr Dominates Remote Outsourcing as the Virtual Assistant Leader&apos;</em>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                         </div>
+                         <!-- Client 6 -->
+                         <div class="client_grid_container">
+                            <div class="client_grid_content">
+                                <figure class="client_content">
+                                    <a href="#" target="_blank">
+                                        <img src="assets/images/LOfficiel-768x177-removebg-preview.webp" alt="forbes" loading="lazy" decoding="async" width="768" height="177">
+                                    </a>
+                                    <figcaption class="section_content_text">
+                                        <em>&apos;CodeMûr Redefines Global Recruitment With AI-Powered Remote Hiring&apos;</em>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                         </div>
+                    </div>
+                    <section id="section_trust">
+                        <div class="section_trust_content">
+                            <h3 class="section_content_title">
+                                4.9 Stars from +2,500 reviews across
+                                <a href="#" class="link">Trustpilot</a>,
+                                <a href="#" class="link">Google Reviews</a>
+                                and
+                                <a href="#" class="link">Glassdoor</a>
+                            </h3>
+                            <div class="section_trust_stars" aria-label="4.9 stars">
+                                <div class="trust_stars_container" aria-hidden="true">
+                                    <div class="star star_fill" aria-hidden="true">
+                                        <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512"><path id="Path 0" class="s0" d="m241.09 52.75c-7.14 21.86-20 61.35-28.57 87.75-8.58 26.4-16.26 49.01-17.06 50.25-0.8 1.24-2.92 3.04-4.71 4-3.02 1.63-9.88 1.77-96.12 2.02-55.94 0.16-93.32 0.64-94 1.21-0.83 0.68-0.72 1.39 0.37 2.62 0.83 0.92 34.13 25.42 74 54.43 39.88 29.01 73.63 53.97 75 55.46 1.83 1.99 2.59 4.08 2.86 7.86 0.31 4.54-3.02 15.45-28 91.9-22.56 69.01-28.11 87.01-27.12 88 0.93 0.94 1.79 0.98 3.5 0.15 1.24-0.61 34.44-24.49 73.76-53.08 39.32-28.59 72.96-52.73 74.75-53.65 1.79-0.92 4.6-1.67 6.25-1.67 1.65 0 4.46 0.75 6.25 1.67 1.79 0.92 35.31 24.99 74.5 53.5 39.19 28.51 72.38 52.39 73.76 53.08 2.01 1 2.77 1 3.75 0.01 0.99-0.99-4.56-19.03-27.04-88-21.16-64.94-28.26-87.95-28.25-91.51 0.02-3.73 0.62-5.43 2.78-7.91 1.51-1.73 34.02-25.87 72.25-53.63 38.23-27.76 71.41-51.99 73.75-53.84 2.34-1.85 4.1-3.93 3.92-4.62-0.27-0.98-20.2-1.36-93.75-1.75-86.5-0.46-93.66-0.63-96.67-2.25-1.79-0.96-3.91-2.76-4.71-4-0.8-1.24-8.48-23.85-17.06-50.25-8.57-26.4-21.42-65.89-28.54-87.75-11.23-34.51-13.2-39.75-14.91-39.75-1.71 0-3.69 5.25-14.94 39.75z"/></svg>
+                                    </div>
+                                    <div class="star star_fill" aria-hidden="true">
+                                        <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512"><path id="Path 0" class="s0" d="m241.09 52.75c-7.14 21.86-20 61.35-28.57 87.75-8.58 26.4-16.26 49.01-17.06 50.25-0.8 1.24-2.92 3.04-4.71 4-3.02 1.63-9.88 1.77-96.12 2.02-55.94 0.16-93.32 0.64-94 1.21-0.83 0.68-0.72 1.39 0.37 2.62 0.83 0.92 34.13 25.42 74 54.43 39.88 29.01 73.63 53.97 75 55.46 1.83 1.99 2.59 4.08 2.86 7.86 0.31 4.54-3.02 15.45-28 91.9-22.56 69.01-28.11 87.01-27.12 88 0.93 0.94 1.79 0.98 3.5 0.15 1.24-0.61 34.44-24.49 73.76-53.08 39.32-28.59 72.96-52.73 74.75-53.65 1.79-0.92 4.6-1.67 6.25-1.67 1.65 0 4.46 0.75 6.25 1.67 1.79 0.92 35.31 24.99 74.5 53.5 39.19 28.51 72.38 52.39 73.76 53.08 2.01 1 2.77 1 3.75 0.01 0.99-0.99-4.56-19.03-27.04-88-21.16-64.94-28.26-87.95-28.25-91.51 0.02-3.73 0.62-5.43 2.78-7.91 1.51-1.73 34.02-25.87 72.25-53.63 38.23-27.76 71.41-51.99 73.75-53.84 2.34-1.85 4.1-3.93 3.92-4.62-0.27-0.98-20.2-1.36-93.75-1.75-86.5-0.46-93.66-0.63-96.67-2.25-1.79-0.96-3.91-2.76-4.71-4-0.8-1.24-8.48-23.85-17.06-50.25-8.57-26.4-21.42-65.89-28.54-87.75-11.23-34.51-13.2-39.75-14.91-39.75-1.71 0-3.69 5.25-14.94 39.75z"/></svg>
+                                    </div>
+                                    <div class="star star_fill" aria-hidden="true">
+                                        <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512"><path id="Path 0" class="s0" d="m241.09 52.75c-7.14 21.86-20 61.35-28.57 87.75-8.58 26.4-16.26 49.01-17.06 50.25-0.8 1.24-2.92 3.04-4.71 4-3.02 1.63-9.88 1.77-96.12 2.02-55.94 0.16-93.32 0.64-94 1.21-0.83 0.68-0.72 1.39 0.37 2.62 0.83 0.92 34.13 25.42 74 54.43 39.88 29.01 73.63 53.97 75 55.46 1.83 1.99 2.59 4.08 2.86 7.86 0.31 4.54-3.02 15.45-28 91.9-22.56 69.01-28.11 87.01-27.12 88 0.93 0.94 1.79 0.98 3.5 0.15 1.24-0.61 34.44-24.49 73.76-53.08 39.32-28.59 72.96-52.73 74.75-53.65 1.79-0.92 4.6-1.67 6.25-1.67 1.65 0 4.46 0.75 6.25 1.67 1.79 0.92 35.31 24.99 74.5 53.5 39.19 28.51 72.38 52.39 73.76 53.08 2.01 1 2.77 1 3.75 0.01 0.99-0.99-4.56-19.03-27.04-88-21.16-64.94-28.26-87.95-28.25-91.51 0.02-3.73 0.62-5.43 2.78-7.91 1.51-1.73 34.02-25.87 72.25-53.63 38.23-27.76 71.41-51.99 73.75-53.84 2.34-1.85 4.1-3.93 3.92-4.62-0.27-0.98-20.2-1.36-93.75-1.75-86.5-0.46-93.66-0.63-96.67-2.25-1.79-0.96-3.91-2.76-4.71-4-0.8-1.24-8.48-23.85-17.06-50.25-8.57-26.4-21.42-65.89-28.54-87.75-11.23-34.51-13.2-39.75-14.91-39.75-1.71 0-3.69 5.25-14.94 39.75z"/></svg>
+                                    </div>
+                                    <div class="star star_fill" aria-hidden="true">
+                                        <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512"><path id="Path 0" class="s0" d="m241.09 52.75c-7.14 21.86-20 61.35-28.57 87.75-8.58 26.4-16.26 49.01-17.06 50.25-0.8 1.24-2.92 3.04-4.71 4-3.02 1.63-9.88 1.77-96.12 2.02-55.94 0.16-93.32 0.64-94 1.21-0.83 0.68-0.72 1.39 0.37 2.62 0.83 0.92 34.13 25.42 74 54.43 39.88 29.01 73.63 53.97 75 55.46 1.83 1.99 2.59 4.08 2.86 7.86 0.31 4.54-3.02 15.45-28 91.9-22.56 69.01-28.11 87.01-27.12 88 0.93 0.94 1.79 0.98 3.5 0.15 1.24-0.61 34.44-24.49 73.76-53.08 39.32-28.59 72.96-52.73 74.75-53.65 1.79-0.92 4.6-1.67 6.25-1.67 1.65 0 4.46 0.75 6.25 1.67 1.79 0.92 35.31 24.99 74.5 53.5 39.19 28.51 72.38 52.39 73.76 53.08 2.01 1 2.77 1 3.75 0.01 0.99-0.99-4.56-19.03-27.04-88-21.16-64.94-28.26-87.95-28.25-91.51 0.02-3.73 0.62-5.43 2.78-7.91 1.51-1.73 34.02-25.87 72.25-53.63 38.23-27.76 71.41-51.99 73.75-53.84 2.34-1.85 4.1-3.93 3.92-4.62-0.27-0.98-20.2-1.36-93.75-1.75-86.5-0.46-93.66-0.63-96.67-2.25-1.79-0.96-3.91-2.76-4.71-4-0.8-1.24-8.48-23.85-17.06-50.25-8.57-26.4-21.42-65.89-28.54-87.75-11.23-34.51-13.2-39.75-14.91-39.75-1.71 0-3.69 5.25-14.94 39.75z"/></svg>
+                                    </div>
+                                    <div class="star star_fill star_fraction" aria-hidden="true">
+                                        <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512"><path id="Path 0" class="s0" d="m241.09 52.75c-7.14 21.86-20 61.35-28.57 87.75-8.58 26.4-16.26 49.01-17.06 50.25-0.8 1.24-2.92 3.04-4.71 4-3.02 1.63-9.88 1.77-96.12 2.02-55.94 0.16-93.32 0.64-94 1.21-0.83 0.68-0.72 1.39 0.37 2.62 0.83 0.92 34.13 25.42 74 54.43 39.88 29.01 73.63 53.97 75 55.46 1.83 1.99 2.59 4.08 2.86 7.86 0.31 4.54-3.02 15.45-28 91.9-22.56 69.01-28.11 87.01-27.12 88 0.93 0.94 1.79 0.98 3.5 0.15 1.24-0.61 34.44-24.49 73.76-53.08 39.32-28.59 72.96-52.73 74.75-53.65 1.79-0.92 4.6-1.67 6.25-1.67 1.65 0 4.46 0.75 6.25 1.67 1.79 0.92 35.31 24.99 74.5 53.5 39.19 28.51 72.38 52.39 73.76 53.08 2.01 1 2.77 1 3.75 0.01 0.99-0.99-4.56-19.03-27.04-88-21.16-64.94-28.26-87.95-28.25-91.51 0.02-3.73 0.62-5.43 2.78-7.91 1.51-1.73 34.02-25.87 72.25-53.63 38.23-27.76 71.41-51.99 73.75-53.84 2.34-1.85 4.1-3.93 3.92-4.62-0.27-0.98-20.2-1.36-93.75-1.75-86.5-0.46-93.66-0.63-96.67-2.25-1.79-0.96-3.91-2.76-4.71-4-0.8-1.24-8.48-23.85-17.06-50.25-8.57-26.4-21.42-65.89-28.54-87.75-11.23-34.51-13.2-39.75-14.91-39.75-1.71 0-3.69 5.25-14.94 39.75z"/></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================== -->
+        <!--                About Us                  -->
+        <!-- ======================================== -->
+
+        <section id="about">
+            <div class="section_container">
+                <div class="section_picture">
+                    <picture class="picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="assets/images/team_picture.png">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="assets/images/team_picture.png">
+                        <img src="assets/images/team_picture.png" alt="team" loading="lazy" decoding="async">
+                    </picture>
+                    <picture class="picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="assets/images/guy_computer.png">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="assets/images/guy_computer.png">
+                        <img src="assets/images/guy_computer.png" alt="work" loading="lazy" decoding="async">
+                    </picture>
+                    <div class="zigzag-pair" aria-hidden="true">
+                        <div class="zigzag_lines">
+                            <span class="zigzag_line zigzag_line1"></span>
+                            <span class="zigzag_line zigzag_line2"></span>
+                            <span class="zigzag_line zigzag_line3"></span>
+                            <span class="zigzag_line zigzag_line4"></span>
+                            <span class="zigzag_line zigzag_line5"></span>
+                            <span class="zigzag_line zigzag_line6"></span>
+                        </div>
+                        <div class="zigzag_lines">
+                            <span class="zigzag_line zigzag_line1"></span>
+                            <span class="zigzag_line zigzag_line2"></span>
+                            <span class="zigzag_line zigzag_line3"></span>
+                            <span class="zigzag_line zigzag_line4"></span>
+                            <span class="zigzag_line zigzag_line5"></span>
+                            <span class="zigzag_line zigzag_line6"></span>
+                        </div>
+                        <div class="zigzag_lines">
+                            <span class="zigzag_line zigzag_line1"></span>
+                            <span class="zigzag_line zigzag_line2"></span>
+                            <span class="zigzag_line zigzag_line3"></span>
+                            <span class="zigzag_line zigzag_line4"></span>
+                            <span class="zigzag_line zigzag_line5"></span>
+                            <span class="zigzag_line zigzag_line6"></span>
+                        </div>
+                        <div class="zigzag_lines">
+                            <span class="zigzag_line zigzag_line1"></span>
+                            <span class="zigzag_line zigzag_line2"></span>
+                            <span class="zigzag_line zigzag_line3"></span>
+                            <span class="zigzag_line zigzag_line4"></span>
+                            <span class="zigzag_line zigzag_line5"></span>
+                            <span class="zigzag_line zigzag_line6"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="section_content">
+                    <span class="section_content_topper">Who We Are?</span>
+                    <h2 class="section_content_title">Your Partner in Global Outsourcing</h2>
+                    <p class="section_content_text">
+                        Through its connections to the top 1% of remote talent in the Philippines and Latin America, CodeMûr has been assisting companies in scaling more intelligently since 2014. We are a reputable partner dedicated to assisting you in expanding more quickly, reducing expenses, and assembling dependable teams across borders. We are not just another outsourcing business.
+                    </p>
+                    <p class="section_content_text">
+                        We take care of the sourcing, screening, and management so you can concentrate on getting results, whether you need a virtual assistant, customer service, or specialized professionals.  CodeMûr makes international hiring easy, economical, and long-lasting, having placed thousands of successful hires worldwide.
+                    </p>
+                    <a href="contact-us.html" class="button_solid">Access Top Talent</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================== -->
+        <!--            Service Highlight             -->
+        <!-- ======================================== -->
+
+        <section id="service">
+            <div class="section_container">
+                <div class="section_content">
+                    <h2 class="section_content_title">Services Designed to Scale Your Business Without Borders</h2>
+                    <div class="section_content_cards">
+                        <!-- Card 1 -->
+                        <div class="cards_container">
+                            <div class="cards_content card1">
+                                <p class="section_content_text">
+                                    CodeMûr&apos;s skilled remote teams can help you scale more quickly while providing top-notch talent at a fraction of the price.
+                                </p>
+                                <a href="services.html" class="button_solid button_icon">See All Services
+                                    <span class="button_icon" aria-hidden="true">&rightarrow;</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                         <div class="cards_container">
+                            <div class="cards_content">
+                                <div class="cards_icon_container" aria-hidden="true">
+                                    <svg width="46" height="40" viewBox="0 0 46 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5002 39.5833H35.5002L23.0002 27.0833L10.5002 39.5833ZM41.7502 0H4.25016C1.9585 0 0.0834961 1.875 0.0834961 4.16667V29.1667C0.0834961 31.4583 1.9585 33.3333 4.25016 33.3333H12.5835V29.1667H4.25016V4.16667H41.7502V29.1667H33.4168V33.3333H41.7502C44.0418 33.3333 45.9168 31.4583 45.9168 29.1667V4.16667C45.9168 1.875 44.0418 0 41.7502 0Z" fill="#C90418"/>
+                                    </svg>
+                                </div>
+                                <h3 class="section_content_title">Elite Virtual Assistants</h3>
+                                <p class="section_content_text">
+                                    Save time and concentrate on growth by delegating administrative, scheduling, and daily operations tasks to expert virtual assistants. CodeMûr identifies the highest caliber VAs trained to deliver accuracy, speed, and dependability, so your business continues to run effortlessly 24/7.
+                                </p>
+                            </div>
+                         </div>
+                         <!-- Card 3 -->
+                          <div class="cards_container">
+                            <div class="cards_content">
+                                <div class="cards_icon_container" aria-hidden="true">
+                                    <svg width="46" height="40" viewBox="0 0 46 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5002 39.5833H35.5002L23.0002 27.0833L10.5002 39.5833ZM41.7502 0H4.25016C1.9585 0 0.0834961 1.875 0.0834961 4.16667V29.1667C0.0834961 31.4583 1.9585 33.3333 4.25016 33.3333H12.5835V29.1667H4.25016V4.16667H41.7502V29.1667H33.4168V33.3333H41.7502C44.0418 33.3333 45.9168 31.4583 45.9168 29.1667V4.16667C45.9168 1.875 44.0418 0 41.7502 0Z" fill="#C90418"/>
+                                    </svg>
+                                </div>
+                                <h3 class="section_content_title">24/7 Customer Support Teams</h3>
+                                <p class="section_content_text">
+                                    Support your retention strategy and keep customers happy with dedicated support agents on phone, email, and chat. Our trained support specialists deliver seamless, consistent service 24/7, using your brand voice and tone to ensure every interaction fosters trust and promotes retention.
+                                </p>
+                            </div>
+                         </div>
+                         <!-- Card 4 -->
+                          <div class="cards_container">
+                            <div class="cards_content">
+                                <div class="cards_icon_container" aria-hidden="true">
+                                    <svg width="46" height="40" viewBox="0 0 46 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5002 39.5833H35.5002L23.0002 27.0833L10.5002 39.5833ZM41.7502 0H4.25016C1.9585 0 0.0834961 1.875 0.0834961 4.16667V29.1667C0.0834961 31.4583 1.9585 33.3333 4.25016 33.3333H12.5835V29.1667H4.25016V4.16667H41.7502V29.1667H33.4168V33.3333H41.7502C44.0418 33.3333 45.9168 31.4583 45.9168 29.1667V4.16667C45.9168 1.875 44.0418 0 41.7502 0Z" fill="#C90418"/>
+                                    </svg>
+                                </div>
+                                <h3 class="section_content_title">Sales Growth Specialists</h3>
+                                <p class="section_content_text">
+                                    Accelerate your revenue growth by utilizing offshore sales representatives who know how to qualify leads, nurture opportunities, and close deals. We create flexible sales teams that generate leads for you, lower cost per acquisition, and give you a competitive advantage in any market.
+                                </p>
+                            </div>
+                         </div>
+                         <!-- Card 5 -->
+                          <div class="cards_container">
+                            <div class="cards_content">
+                                <div class="cards_icon_container" aria-hidden="true">
+                                    <svg width="46" height="40" viewBox="0 0 46 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5002 39.5833H35.5002L23.0002 27.0833L10.5002 39.5833ZM41.7502 0H4.25016C1.9585 0 0.0834961 1.875 0.0834961 4.16667V29.1667C0.0834961 31.4583 1.9585 33.3333 4.25016 33.3333H12.5835V29.1667H4.25016V4.16667H41.7502V29.1667H33.4168V33.3333H41.7502C44.0418 33.3333 45.9168 31.4583 45.9168 29.1667V4.16667C45.9168 1.875 44.0418 0 41.7502 0Z" fill="#C90418"/>
+                                    </svg>
+                                </div>
+                                <h3 class="section_content_title">Creative & Digital Marketing Experts</h3>
+                                <p class="section_content_text">
+                                    From graphic design, to SEO, to paid ads, our creative professionals optimize your online presence. CodeMûr, will connect you with marketers who combine strategy with execution to increase your brand's visibility, engagement, and measurable results.
+                                </p>
+                            </div>
+                         </div>
+                         <!-- Card 6 -->
+                         <div class="cards_container">
+                            <div class="cards_content">
+                                <div class="cards_icon_container" aria-hidden="true">
+                                    <svg width="46" height="40" viewBox="0 0 46 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.5002 39.5833H35.5002L23.0002 27.0833L10.5002 39.5833ZM41.7502 0H4.25016C1.9585 0 0.0834961 1.875 0.0834961 4.16667V29.1667C0.0834961 31.4583 1.9585 33.3333 4.25016 33.3333H12.5835V29.1667H4.25016V4.16667H41.7502V29.1667H33.4168V33.3333H41.7502C44.0418 33.3333 45.9168 31.4583 45.9168 29.1667V4.16667C45.9168 1.875 44.0418 0 41.7502 0Z" fill="#C90418"/>
+                                    </svg>
+                                </div>
+                                <h3 class="section_content_title">Skilled Specialists On Demand</h3>
+                                <p class="section_content_text">
+                                    Do you want accounting, IT, or technical support? CodeMûr has a pool of well-vetted professionals for specialized roles. We will match you with professionals who can deliver skill and precision, so you can scale confidently into new projects and markets.
+                                </p>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+                <!-- Section design shapes -->
+                <svg class="section_service_shape_top_front" aria-hidden="true" viewBox="0 0 1920 403" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 288H80C160 288 320 288 480 250C640 211 800 134 960 125C1120 115 1280 173 1440 230C1600 288 1760 346 1840 374L1920 403V0H1840C1760 0 1600 0 1440 0C1280 0 1120 0 960 0C800 0 640 0 480 0C320 0 160 0 80 0H0V288Z" fill="url(#paint0_linear_280_5)" fill-opacity="0.12"/>
+                <defs>
+                <linearGradient id="paint0_linear_280_5" x1="366" y1="173.5" x2="1550.5" y2="168" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#E0C3FC"/>
+                <stop offset="1" stop-color="#8EC5FC"/>
+                </linearGradient>
+                </defs>
+                </svg>
+                
+                <svg class="section_service_shape_top_back" aria-hidden="true" viewBox="0 0 1920 288" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 230.4H1856C1792 230.4 1664 230.4 1536 201.6C1408 172.8 1280 115.2 1152 96C1024 76.8 896 96 768 134.4C640 172.8 512 230.4 384 259.2C256 288 128 288 64 288H0V0H64C128 0 256 0 384 0C512 0 640 0 768 0C896 0 1024 0 1152 0C1280 0 1408 0 1536 0C1664 0 1792 0 1856 0H1920V230.4Z" fill="url(#paint0_linear_280_2)" fill-opacity="0.06"/>
+                <defs>
+                <linearGradient id="paint0_linear_280_2" x1="1550.5" y1="71.9999" x2="462.5" y2="77.4999" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#8EC5FC"/>
+                <stop offset="1" stop-color="#E0C3FC"/>
+                </linearGradient>
+                </defs>
+                </svg>
+
+                <svg class="section_service_shape_bottom_front" aria-hidden="true" viewBox="0 0 1920 288" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 57.6H64C128 57.6 256 57.6 384 86.4C512 115.2 640 172.8 768 192C896 211.2 1024 192 1152 153.6C1280 115.2 1408 57.6 1536 28.8C1664 0 1792 0 1856 0H1920V288H1856C1792 288 1664 288 1536 288C1408 288 1280 288 1152 288C1024 288 896 288 768 288C640 288 512 288 384 288C256 288 128 288 64 288H0V57.6Z" fill="url(#paint0_linear_251_11)" fill-opacity="0.12"/>
+                <defs>
+                <linearGradient id="paint0_linear_251_11" x1="889" y1="172.5" x2="1278.5" y2="172.5" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#E0C3FC"/>
+                <stop offset="1" stop-color="#8EC5FC"/>
+                </linearGradient>
+                </defs>
+                </svg>
+
+                <svg class="section_service_shape_bottom_back" aria-hidden="true" viewBox="0 0 1920 397" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0L80 66.3102C160 132.62 320 264.38 480 305.716C640 347.052 800 297.965 960 248.017C1120 198.931 1280 148.983 1440 148.983C1600 148.983 1760 198.931 1840 223.043L1920 248.017V397H1840C1760 397 1600 397 1440 397C1280 397 1120 397 960 397C800 397 640 397 480 397C320 397 160 397 80 397H0V0Z" fill="url(#paint0_linear_280_4)" fill-opacity="0.06"/>
+                <defs>
+                <linearGradient id="paint0_linear_280_4" x1="1437" y1="344" x2="960" y2="344" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#E0C3FC"/>
+                <stop offset="1" stop-color="#8EC5FC"/>
+                </linearGradient>
+                </defs>
+                </svg>
+            </div>
+        </section>
+
+        <!-- ======================================== -->
+        <!--               Process steps              -->
+        <!-- ======================================== -->
+
+        <section id="process_steps">
+            <div class="section_container">
+                <div class="section_content">
+                    <h2 class="section_content_title">How to Hire With CodeMûr</h2>
+                    <div class="section_content_wrapper">
+                        <div class="content_side">
+                            <div class="content_side_container">
+                                <p class="section_content_text">
+                                    At CodeMûr, we believe that creating your dream team should not be an arduous process. 
+                                    Instead of going through numerous freelancer profiles or hiring one after another until you find the right fit, we employ a validated, streamlined process to match you with highly capable agents who are fully aligned with your business objectives.
+                                </p>
+                                <h3 class="section_content_title">Our 5-Step Hiring Process</h3>
+                                <ol class="section_content_list" role="list">
+                                    <li class="content_list"><div class="content_list_wrapper"><h3 class="list_title">Tell Us What You Need</h3>
+                                        <p class="list_text">Share your role requirements, skills, and business objectives.</p></div>
+                                    </li>
+
+                                    <li class="content_list"><div class="content_list_wrapper"><h3 class="list_title">We Source Top Candidates</h3>
+                                        <p class="list_text">Our team vets and shortlists only the best global talent.</p></div>
+                                    </li>
+
+                                    <li class="content_list"><div class="content_list_wrapper"><h3 class="list_title">Interview & Select</h3>
+                                        <p class="list_text">You meet the candidates, test their fit, and choose who you want.</p></div>
+                                    </li>
+                                    
+                                    <li class="content_list"><div class="content_list_wrapper"><h3 class="list_title">Onboard With Ease</h3>
+                                        <p class="list_text">We handle contracts, compliance, and setup so you can hit the ground running.</p></div>
+                                    </li>
+
+                                    <li class="content_list"><div class="content_list_wrapper"><h3 class="list_title">Scale & Grow</h3>
+                                        <p class="list_text">Your dedicated agent integrates seamlessly, helping you grow without borders.</p></div>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="picture_side">
+                            <div class="picture_side_container">
+                                <span class="section_content_topper">A TRUSTED, EFFICIENT WAY TO HIRE REMOTE EXPERTS</span>
+                                <div class="section_picture">
+                                    <picture class="picture">
+                                        <!--Mobile Image-->
+                                        <source media="(max-width: 600px)" srcset="assets/images/hirePicture.jpg">
+                                        <!--Tablet and above Image-->
+                                        <source media="(min-width: 601px)" srcset="assets/images/hirePicture.jpg">
+                                        <img src="assets/images/hirePicture.jpg" alt="team" loading="lazy" decoding="async">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================== -->
+        <!--                   CTA                    -->
+        <!-- ======================================== -->
+
+        <section id="cta">
+            <div class="section_container">
+                <div class="section_content">
+                    <h2 class="section_content_title">Get a free consultation with CodeMûr expert today</h2>
+                    <!-- Form with country code & validation -->
+                     <!-- IMPORTANT: This form lacks proper form validation -->
+                    <form id="form_primary">
+                        <div class="form_element_container">
+                            <!-- Add the required star with an ::after -->
+                            <label for="fname">First Name</label>
+                            <input type="text" id="fname" name="first_name" required>
+                            <span class="form_error_message"></span>
+                        </div>
+                        <div class="form_element_container">
+                            <label for="lname">Last Name</label>
+                            <input type="text" id="lname" name="last_name" required>
+                            <span class="form_error_message"></span>
+                        </div>
+                        <div class="form_element_container">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" name="email" required>
+                            <span class="form_error_message"></span>
+                        </div>
+                        <fieldset class="form_element_container">
+                            <legend>Phone</legend>
+                            <div class="form_element_content">
+                                <!-- IMPORTANT: This dropdown lacks many functionality features such as: accessibility (tab), JSON file country code, search bar inside dropdown, etc.. -->
+                                <div class="dropdown" id="dropdown_country">
+                                    <div class="dropdown_select"><p></p><i class="fa fa-angle-down"></i></div>
+                                    <!-- full_screen class toggle on click: JS -->
+                                    <ul class="dropdown_list" aria-expanded="false">
+                                        <!-- Insert every country code needed -->
+                                        <li data-code="+1">🇺🇸 United States</li>
+                                        <li data-code="+44">🇬🇧 United kingdom</li>
+                                        <li data-code="+63">🇵🇭 Philippines</li>
+                                    </ul>
+                                </div>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <span class="form_error_message"></span>
+                        </fieldset>
+                        <div class="form_element_container">
+                            <label for="message">Message</label>
+                            <textarea class="label_message" name="message" id="message" placeholder="Write message..."></textarea>
+                        </div>
+                        <button class="button_solid button_submit">Submit Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>    
+    </main>
+
+    <!-- ======================================== -->
+    <!--                  Footer                  -->
+    <!-- ======================================== -->
+
+    <footer id="footer">
+        <div class="section_container">
+            <!-- Logo Group -->
+            <div class="footer_logo_group">
+                <a href="index.html" class="footer_logo" aria-label="back to home">
+                    <img src="https://res.cloudinary.com/dzk1utcsn/image/upload/v1760523884/codem%C3%BBr_logoLight.svg" alt="logo" width="180" aria-hidden="true" decoding="async">
+                </a>
+                <p class="section_content_text">
+                    CodeMûr is a trusted leader in Call Center, BPO, Software Development, and ITES. We deliver innovative solutions and publish specialized resources for clients worldwide.
+                </p>
+            </div>
+            <!-- Links -->
+            <div class="footer_nav">
+                <span class="footer_content_title">Quick Links</span>
+                <ul class="footer_content_list" role="list" aria-label="footer menu">
+                    <li class="footer_list"><a href="index.html" class="footer_link">Home</a></li>
+                    <li class="footer_list"><a href="services.html" class="footer_link">Services</a></li>
+                    <li class="footer_list"><a href="industries.html" class="footer_link">Industries</a></li>
+                    <li class="footer_list"><a href="case-studies.html" class="footer_link">Case Studies</a></li>
+                    <li class="footer_list"><a href="contact-us.html" class="footer_link">Contact</a></li>
+                </ul>
+            </div>
+            <!-- Contact Info -->
+            <div class="footer_contact_group">
+                <span class="footer_content_title">Contact</span>
+                <ul class="contact_group" role="list">
+
+                    <li class="contact_list">
+                        <div class="contact_list_icon_container" aria-label="address">
+                            <div class="contact_list_icon" aria-hidden="true">
+                                <svg width="21" height="31" viewBox="0 0 21 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.4998 0.916504C4.85609 0.916504 0.291504 5.48109 0.291504 11.1248C0.291504 18.7811 10.4998 30.0832 10.4998 30.0832C10.4998 30.0832 20.7082 18.7811 20.7082 11.1248C20.7082 5.48109 16.1436 0.916504 10.4998 0.916504ZM10.4998 14.7707C8.48734 14.7707 6.854 13.1373 6.854 11.1248C6.854 9.11234 8.48734 7.479 10.4998 7.479C12.5123 7.479 14.1457 9.11234 14.1457 11.1248C14.1457 13.1373 12.5123 14.7707 10.4998 14.7707Z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="section_content_text">
+                            Lopez Jaena corner Burgos, Sindh 75500, PK
+                        </p>
+                    </li>
+
+                    <li class="contact_list">
+                        <div class="contact_list_icon_container" aria-label="phone">
+                            <div class="contact_list_icon" aria-hidden="true">
+                                <svg width="18" height="30" viewBox="0 0 18 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.3957 0.941015L2.6033 0.928223C1.19614 0.928223 0.0576172 2.07954 0.0576172 3.4867V26.513C0.0576172 27.9202 1.19614 29.0715 2.6033 29.0715H15.3957C16.8029 29.0715 17.9542 27.9202 17.9542 26.513V3.4867C17.9542 2.07954 16.8029 0.941015 15.3957 0.941015ZM15.3957 23.9545H2.6033V6.04518H15.3957V23.9545ZM10.0229 16.5605V18.7992L14.1165 14.9743L10.0229 11.1621V13.3368C6.04446 13.8869 4.4582 16.6117 3.88254 19.3493C5.3025 17.4304 7.18298 16.5605 10.0229 16.5605Z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="section_content_text">
+                            <a href="tel: +13212425155" class="contact_link">+1 321-242-5155</a>,
+                            <a href="tel: +13042204258" class="contact_link">+1 304-220-4258</a>
+                        </p>
+                    </li>
+
+                    <li class="contact_list">
+                        <div class="contact_list_icon_container" aria-label="inbox">
+                            <div class="contact_list_icon" aria-hidden="true">
+                                <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.2338 0.766113H2.766C1.35884 0.766113 0.220312 1.91743 0.220312 3.32459L0.20752 18.6755C0.20752 20.0826 1.35884 21.2339 2.766 21.2339H23.2338C24.641 21.2339 25.7923 20.0826 25.7923 18.6755V3.32459C25.7923 1.91743 24.641 0.766113 23.2338 0.766113ZM23.2338 5.88307L12.9999 12.2793L2.766 5.88307V3.32459L12.9999 9.72079L23.2338 3.32459V5.88307Z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="section_content_text">
+                            <a href="mailto:info@codemur.com" class="contact_link">info@codemur.com</a>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+<script src="assets/js/nav.js"></script>
+<script src="assets/js/contact-dropdown.js"></script>

@@ -1,0 +1,973 @@
+/*-- -------------------------- -->
+<---        Core Styles         -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0rem) {
+    :root {
+        --clr-primary: #853A3A;
+        --clr-primary-light: #001f3f;
+        --clr-secondary: #E4A95F;
+        --clr-secondary-light: #FFBA43;
+        --clr-header: #1a1a1a;
+        --clr-body-text: #4E4B66;
+        --clr-body-text-white: #FAFBFC;
+
+        /* 13px - 16px */
+        --fs-topper: clamp(0.8125rem, 1.6vw, 1rem);
+        /* 31px - 49px */
+        --fs-header: clamp(1.9375rem, 3.9vw, 3.0625rem);
+        /* 16px */
+        --fs-body: 1rem;
+
+        /* 60px - 100px top and bottom growing/shrinking by the viewport-width & 16px left and right */
+        --padding-section: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+    }
+
+    @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        src: local(''),
+            url('/assets/fonts/roboto-regular-webfont.woff2') format('woff2'),
+            url('/assets/fonts/roboto-regular-webfont.woff') format('woff');
+    }
+
+    @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        src: local(''),
+            url('/assets/fonts/roboto-bold-webfont.woff2') format('woff2'),
+            url('/assets/fonts/roboto-bold-webfont.woff') format('woff');
+    }
+
+    @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 900;
+        src: local(''),
+            url('/assets/fonts/roboto-black-webfont.woff2') format('woff2'),
+            url('/assets/fonts/roboto-black-webfont.woff') format('woff');
+    }
+
+    /* My Resets */
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        line-height: 1.5;
+        /* 5. Improve text rendering */
+        -webkit-font-smoothing: antialiased;
+    }
+
+    img, picture, video, canvas, svg {
+        display: block;
+        max-width: 100%;
+    }
+
+    input, button, textarea, select {
+        font: inherit;
+    }
+
+    p {
+        text-wrap: pretty;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        text-wrap: balance;
+    }
+
+    /* Utility classes */
+
+
+    /* General styling */
+    body {
+        font-family: 'Roboto', Arial, sans-serif;
+        color: var(--clr-body-text);
+        overflow-x: hidden;
+        /* Transition for dark mode switch */
+        transition: background-color 0.3s;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--clr-header);
+    }
+
+    a:hover,
+    button:hover {
+        cursor: pointer;
+    }
+
+    .section_content_topper {
+        font-size: var(--fs-topper);
+        line-height: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        font-weight: 700;
+        color: var(--clr-primary);
+        margin-bottom: .25rem;
+        display: block;
+    }
+
+    /* when the class "dark_mode" is addded to the body, change the topper color */
+    body.dark_mode .section_content_topper {
+        color: var(--clr-secondary);
+    }
+
+    .section_content_title {
+        font-size: var(--fs-header);
+        font-weight: 900;
+        line-height: 1.2;
+        max-width: 43.75rem;
+        margin: 0 0 1rem 0;
+    }
+
+    .section_content_text {
+        font-size: var(--fs-body);
+        max-width: 40.625rem;
+    }
+
+    .button_solid {
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        color: white;
+        min-width: 9.375rem;
+        padding: 0 1.5rem;
+        background-color: var(--clr-primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* In case it's inside a container, it's takes up 100% space and the container will be the one controlling its width */
+        flex-basis: 100%;
+    }
+
+    .button_solid::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 0%;
+        background: black;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: width .3s;
+    }
+
+    .button_solid:hover:before {
+        width: 100%;
+    }
+
+    .button_outline {
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        color: var(--clr-primary);
+        min-width: 9.375rem;
+        padding: 0 1.5rem;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        transition: color .3s ease-in-out;
+        /* In case it's inside a container, it's takes up 100% space and the container will be the one controlling its width */
+        flex-basis: 100%;
+    }
+
+    .button_outline::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 0%;
+        background: black;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: width .3s;
+    }
+
+    /* The after adds a fake border at the very back and the overed bg covers it when it comes on */
+    .button_outline::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border: 2px solid var(--clr-primary);
+        z-index: -2;
+    }
+
+    .button_outline:hover {
+        color: white;
+    }
+
+    .button_outline:hover:before {
+        width: 100%;
+    }
+
+    /* This pushes the "skip" link way back, but it's still the very first element so the readers will always start with it */
+    .skip {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        z-index: -1111111;
+    }
+}
+
+/*-- -------------------------- -->
+<---      Dark Mode Toggle      -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0rem) {
+    body.dark_mode #dark_mode_toggle .sun {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+
+    body.dark_mode #dark_mode_toggle .moon {
+        transform: translate(-50%, -150%);
+        opacity: 0;
+        fill: white;
+    }
+
+    #dark_mode_toggle {
+        display: block;
+        position: absolute;
+        top: .625rem;
+        right: 4.375rem;
+        width: 3rem;
+        height: 3rem;
+        background: transparent;
+        border: none;
+        overflow: hidden;
+        z-index: 1000;
+    }
+
+    #dark_mode_toggle img,
+    #dark_mode_toggle svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 1.25rem;
+        height: 1.25rem;
+        pointer-events: none;
+    }
+
+    #dark_mode_toggle .moon {
+        z-index: 2;
+        transition: transform .3s, opacity .3s;
+    }
+
+    #dark_mode_toggle .sun {
+        z-index: 1;
+        transform: translate(-50%, 100%);
+        opacity: 0;
+        transition: transform .3s, opacity .3s;
+    }
+}
+/* Desktop */
+@media only screen and (min-width: 64rem) {
+    #dark_mode_toggle {
+        position: relative;
+        transform: none;
+        top: auto;
+        right: auto;
+    }
+
+    #dark_mode_toggle:hover {
+        cursor: pointer;
+    }
+}
+
+/*-- -------------------------- -->
+<---     Mobile Navigation      -->
+<--- -------------------------- -*/
+/* Mobile - 1023px */
+@media only screen and (max-width: 63.9375rem) {
+    /* When body has the .open class */
+    body.open {
+        overflow: hidden;
+        /* optional extra lock */
+        height: 100vh;
+    }
+
+    #main_nav {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        background-color: white;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        position: fixed;
+        z-index: 10000;
+    }
+
+    #main_nav::before {
+        content: "";
+        width: 100%;
+        height: 0vh;
+        background: rgba(0, 0, 0, 0.6);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        position: absolute;
+        display: block;
+        top: 100%;
+        right: 0;
+        z-index: -1100;
+        opacity: 0;
+        transition: height .5s, opacity .5s;
+    }
+
+    /* When navigation as .active_element class - JS */
+    #main_nav.active_element:before {
+        height: 150vh;
+        opacity: 1;
+    }
+
+    #main_nav.active_element .nav_list_container {
+        opacity: 1;
+        transform: scaleY(1);
+        transition-delay: .15s;
+    }
+
+    #main_nav.active_element .nav_list_content_element {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    #main_nav .main_nav_container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    #main_nav .nav_logo {
+        width: 30%;
+        max-width: 9.125rem;
+        height: 100%;
+        margin: 0 auto 0 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+    }
+
+    #main_nav .nav_logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    #main_nav .nav_mobile_toggle {
+        /* 44px - 48px */
+        width: clamp(2.75rem, 6vw, 3rem);
+        height: clamp(2.75rem, 6vw, 3rem);
+        margin: 0 0 0 auto;
+        border-radius: .025rem;
+        background-color: transparent;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #main_nav .active_element .toggle_line1 {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(225deg);
+    }
+
+    #main_nav .active_element .toggle_line2 {
+        top: 50%;
+        transform-origin: center;
+        transform: translate(-50%, -50%) translateY(0) rotate(-225deg);
+    }
+
+    #main_nav .active_element .toggle_line3 {
+        bottom: 100%;
+        opacity: 0;
+    }
+
+    #main_nav .mobile_toggle_box {
+        /* 24px - 28px */
+        width: clamp(1.5rem, 2vw, 1.75rem);
+        /* 14px - 16px */
+        height: clamp(0.875rem, 1.5vw, 1rem);
+        position: relative;
+    }
+
+    #main_nav .toggle_box_line {
+        width: 100%;
+        height: 2px;
+        border-radius: 2px;
+        background-color: #1a1a1a;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #main_nav .toggle_line1 {
+        top: 0;
+        transform-origin: center;
+        transition: transform .5s, top .3S, left .3S;
+        animation-duration: .7s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+        animation-direction: normal;
+    }
+
+    #main_nav .toggle_line2 {
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        transition: top .3s, left .3s, transform .5s;
+        animation-duration: .7s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+        animation-direction: normal;
+    }
+
+    #main_nav .toggle_line3 {
+        bottom: 0;
+        transition: bottom .3s, opacity .3s;
+    }
+
+    #main_nav .nav_list_container {
+        width: 100%;
+        height: auto;
+        padding-bottom: 2.4em;
+        opacity: 0;
+        background-color: white;
+        box-shadow: inset rgba(0, 0, 0, 0.2) 0px 8px 24px;
+        overflow: hidden;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: -1;
+        /* This is the toggle animation */
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform .4s, opacity .3s;
+    }
+
+    #main_nav .nav_list_content {
+        margin: 0;
+        padding: 3rem 0 0 0;
+        width: 100%;
+        height: auto;
+        max-height: 65vh;
+        overflow: scroll;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1.25rem;
+    }
+
+    #main_nav .nav_list_content_element {
+        width: 100%;
+        text-align: center;
+        list-style: none;
+        margin-right: 0;
+        /* transition from these values */
+        transform: translateY(-4.375rem);
+        opacity: 1;
+        transition: transform .6s, opacity .9s;
+    }
+
+    /* Add more in case you have many items on the list - select the child of type .nav_list_content_element inside its parent - 10 is safe play for me even when I have less */
+    #main_nav .nav_list_content_element:nth-of-type(1) {
+        transition-delay: .05s;
+    }
+
+    #main_nav .nav_list_content_element:nth-of-type(2) {
+        transition-delay: .1s;
+    }
+
+    #main_nav .nav_list_content_element:nth-of-type(3) {
+        transition-delay: .15s;
+    }
+
+    #main_nav .nav_list_content_element:nth-of-type(4) {
+        transition-delay: .2s;
+    }
+
+    #main_nav .nav_list_content_element:nth-of-type(5) {
+        transition-delay: .25s;
+    }
+
+    #main_nav .nav_list_content_element:nth-of-type(6) {
+        transition-delay: .3s;
+    }
+
+    #main_nav .nav_list_content_element:nth-of-type(7) {
+        transition-delay: .35s;
+    }
+
+    #main_nav .nav_list_content_element:nth-of-type(8) {
+        transition-delay: .4s;
+    }
+
+    #main_nav .nav_list_content_element:nth-of-type(9) {
+        transition-delay: .45s;
+    }
+
+    #main_nav .nav_list_content_element:nth-of-type(10) {
+        transition-delay: .5s;
+    }
+
+    #main_nav .nav_list_content_link {
+        /* 16px - 24px */
+        font-size: clamp(1rem, 2.5vw, 1.5rem);
+        line-height: 1.2;
+        text-decoration: none;
+        color: var(--clr-header);
+        display: inline-block;
+        position: relative;
+    }
+
+    #main_nav .nav_list_content_link:before {
+        /* active state underline */
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: var(--clr-secondary);
+        opacity: 1;
+        position: absolute;
+        display: none;
+        bottom: -0.125rem;
+        left: 0;
+    }
+
+    /* when it has active state - JS */
+    #main_nav .nav_list_content_link.active_element:before {
+        display: block;
+    }
+
+    #main_nav .button_solid {
+        display: none;
+    }
+}
+
+/* Dark Mode */
+@media only screen and (max-width: 63.9375rem) {
+    body.dark_mode #main_nav {
+        /* variable --clr-dark is coming for dark.css folder */
+        background-color: var(--clr-dark);
+    }
+
+    body.dark_mode #main_nav .toggle_box_line {
+        background-color: white;
+    }
+
+    body.dark_mode #main_nav .nav_list_container {
+        /* variable --clr-medium is coming for dark.css folder */
+        background-color: var(--clr-medium);
+    }
+
+    body.dark_mode #main_nav .nav_list_content_link {
+        color: var(--clr-body-text-white);
+    }
+}
+
+/*-- -------------------------- -->
+<---     Desktop Navigation     -->
+<--- -------------------------- -*/
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #main_nav {
+        width: 100%;
+        padding: 0 1rem;
+        background-color: white;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        position: fixed;
+        z-index: 10000;
+    }
+
+    #main_nav .main_nav_container {
+        width: 100%;
+        max-width: 80rem;
+        margin: auto;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    #main_nav .nav_mobile_toggle {
+        display: none;
+    }
+
+    #main_nav .nav_logo {
+        width: 14.5%;
+        max-width: 21.875rem;
+        height: 4.0625rem;
+        margin: 0 auto 0 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+    }
+
+    #main_nav .nav_logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    #main_nav .nav_list_content {
+        width: 100%;
+        margin: 0 2rem 0 0;
+        padding: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        /* 20px - 36px */
+        gap: clamp(1.25rem, 2.6vw, 2.25rem);
+    }
+
+    #main_nav .nav_list_content_element {
+        list-style: none;
+        padding: 2rem 0;
+        /* prevent flexbox from squishing it */
+        flex: none;
+    }
+
+    #main_nav .nav_list_content_link {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1vw, 1rem);
+        line-height: 1.5;
+        text-decoration: none;
+        color: var(--clr-body-text);
+        display: block;
+        position: relative;
+    }
+
+    #main_nav .nav_list_content_link:hover:before {
+        width: 100%;
+    }
+
+    #main_nav .nav_list_content_link.active_element:before {
+        width: 100%;
+    }
+
+    #main_nav .nav_list_content_link:before {
+        /* active state underline */
+        content: "";
+        width: 0%;
+        height: 2px;
+        background: var(--clr-primary);
+        opacity: 1;
+        position: absolute;
+        display: block;
+        bottom: 0rem;
+        left: 0;
+        transition: width .3s;
+    }
+
+    /* Overriding button width */
+    #main_nav .nav_button {
+        flex-basis: 0;
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 64rem) {
+    body.dark_mode #main_nav {
+        background-color: var(--clr-dark);
+    }
+
+    body.dark_mode #main_nav .nav_list_content_link {
+        color: var(--clr-body-text-white);
+    }
+
+    body.dark_mode #main_nav .nav_list_content_link:before {
+        background-color: var(--clr-secondary);
+    }
+}
+
+/*-- -------------------------- -->
+<---          Banner            -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #banner {
+        /* 175px - 200px top */
+        padding: clamp(10.9375rem, 10vw, 12.5rem) 1rem 6.25rem;
+        position: relative;
+        z-index: 1;
+    }
+
+    #banner .banner_content {
+        text-align: center;
+        width: 100%;
+        max-width: 80rem;
+        margin: auto;
+        /* In case there's or more elements */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    #banner .banner_content_title {
+        /* 39px - 61px */
+        font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+        font-weight: 900;
+        line-height: 1.2;
+        text-align: inherit;
+        margin: 0;
+        color: var(--clr-body-text-white);
+        position: relative;
+    }
+
+    #banner .picture_background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    #banner .picture_background:before {
+        /* background color overlay */
+        content: "";
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 100%;
+        background: black;
+        opacity: .75;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    #banner .picture_background img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #banner .picture_background:before {
+        opacity: 1;
+        background: linear-gradient(90.01deg, rgba(0, 0, 0, 0.9) 16.86%, rgba(0, 0, 0, 0) 100%);
+    }
+}
+
+/*-- -------------------------- -->
+<---          Footer            -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #footer {
+        /* 60px - 100px top and bottom */
+        padding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+        background-color: #1a1a1a;
+    }
+
+    #footer .section_container {
+        width: 100%;
+        max-width: 34.375rem;
+        margin: auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        /* 68px - 100px */
+        column-gap: clamp(4.25rem, calc(10%), 6.25rem);
+    }
+
+    #footer .footer_logo_group {
+        width: 100%;
+        position: relative;
+    }
+
+    #footer .footer_logo {
+        /* 210px - 240px */
+        width: clamp(13.125rem, 8vw, 15rem);
+        height: auto;
+        display: block;
+        /* 28px - 44px */
+        margin-bottom: clamp(1.75rem, 4.17vw, 2.75rem);
+    }
+
+    #footer .footer_logo img {
+        width: 100%;
+        height: auto;
+    }
+
+    #footer .section_content_text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 2.5vw, 1rem);
+        line-height: 1.5em;
+        margin-bottom: 2rem;
+        /* changes to 305px at desktop */
+        max-width: 33.75rem;
+        color: var(--clr-body-text-white);
+    }
+
+    #footer .footer_list {
+        list-style: none;
+        margin-bottom: .5rem;
+    }
+
+    #footer .footer_list:last-of-type {
+        margin-bottom: 0;
+    }
+
+    #footer .footer_content_title {
+        font-size: 1rem;
+        line-height: 1.5;
+        font-weight: 700;
+        margin-bottom: 0.875rem;
+        color: var(--clr-body-text-white);
+        position: relative;
+        display: block;
+    }
+
+    #footer .footer_content_list {
+        margin-bottom: 2rem;
+    }
+
+    #footer .footer_link {
+        font-size: 1rem;
+        text-decoration: none;
+        color: var(--clr-body-text-white);
+        position: relative;
+    }
+
+    #footer .footer_link::before {
+        /* underline */
+        content: "";
+        width: 0;
+        height: 0.125rem;
+        /* current color of the parent */
+        background: currentColor;
+        opacity: 1;
+        position: absolute;
+        display: block;
+        bottom: -0.125rem;
+        left: 0;
+        transition: width .3s;
+    }
+
+    #footer .footer_link:hover:before {
+        width: 100%;
+    }
+    
+    #footer .contact_group {
+        margin: 0;
+        padding: 0;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-self: stretch;
+        /* gap: .25rem; */
+    }
+
+    #footer .contact_list {
+        list-style: none;
+        margin-bottom: .5rem;
+    }
+
+    #footer .contact_list:last-of-type {
+        margin-bottom: 0;
+    }
+
+    #footer .contact_list {
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: .75rem;
+    }
+
+    #footer .contact_list p {
+        /* Removing space coming from #footer ".section_content_text" at the bottom of these contact element */
+        margin-bottom: 0;
+    }
+
+    #footer .contact_list_icon_container {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* Prevent container to shrink accoring the icon - same size */
+        flex-shrink: 0;
+        background-color: white;
+        border-radius: 5px;
+        /* margin-top: 0.25em; */
+    }
+
+    #footer .contact_list_icon {
+        display: inherit;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #footer .contact_list_icon svg {
+        width: 70%;
+        height: 70%;
+        display: block;
+        object-fit: contain;
+        fill: #1a1a1a;
+        align-self: center;
+    }
+
+    #footer .contact_link {
+        font-size: 1rem;
+        text-decoration: none;
+        text-align: left;
+        color: var(--clr-body-text-white);
+        display: inline-block;
+    }
+
+    #footer .contact_link:hover {
+        text-decoration: underline;
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #footer .section_container {
+        max-width: 80rem;
+        row-gap: 0;
+    }
+
+    #footer .footer_logo_group {
+        width: auto;
+        margin-right: auto;
+    }
+
+    #footer .section_content_text {
+        width: 80%;
+        max-width: 19.0625rem;
+        margin: 0;
+    }
+
+    #footer .footer_nav,
+    #footer .footer_contact_group {
+        /* 8px - 12px */
+        margin-top: clamp(0.5rem, 1.2vw, 0.75rem);
+    }
+}
